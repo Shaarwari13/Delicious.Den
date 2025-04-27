@@ -2,11 +2,203 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Delicious Den Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Den - NMAMIT Food Brand</title>
+    <link rel="stylesheet" href="front.css">
+    <link rel="stylesheet" href="content.css">
+    <style>
+        /* Enhanced index page styles */
+        .hero-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 30px;
+            border-radius: 10px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .category-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .category-info {
+            padding: 20px;
+        }
+        
+        .category-info h2 {
+            color: #561515;
+            margin-top: 0;
+        }
+        
+        .order-btn {
+            display: inline-block;
+            background-color: #a30606;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .order-btn:hover {
+            background-color: #7a0505;
+        }
+        
+        .cart-preview {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Delicious Den! 🍔🍕🍹</h1>
-    <a href="content.html"><button>Go to Menu</button></a>
+    <div class="hero-section">
+        <h1>Welcome to Delicious Den</h1>
+        <p>NMAMIT's favorite food destination serving delicious meals since 2023</p>
+        
+        <div class="button-container">
+            <button onclick="location.href='content.html'">View Full Menu</button>
+            <button onclick="showCart()">View Cart</button>
+        </div>
+    </div>
+
+    <div class="category-grid">
+        <!-- Pizza Card -->
+        <div class="category-card">
+            <img src="https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg" alt="Pizza">
+            <div class="category-info">
+                <h2>Pizza</h2>
+                <p>From classic Margherita to spicy Tandoori, our pizzas are made with love and fresh ingredients.</p>
+                <a href="pizza.html" class="order-btn">Order Now</a>
+            </div>
+        </div>
+        
+        <!-- Burger Card -->
+        <div class="category-card">
+            <img src="https://wallpaperaccess.com/full/1312802.jpg" alt="Burgers">
+            <div class="category-info">
+                <h2>Burgers</h2>
+                <p>Juicy, flavorful burgers that will satisfy your cravings. Try our signature Whooper!</p>
+                <a href="burger.html" class="order-btn">Order Now</a>
+            </div>
+        </div>
+        
+        <!-- Pasta Card -->
+        <div class="category-card">
+            <img src="https://minimalistbaker.com/wp-content/uploads/2016/01/AMAZING-Spicy-Red-Pasta-with-Lentils-and-GF-Pasta-vegan-plantbased-glutenfree-recipe-healthy-dinner.jpg" alt="Pasta">
+            <div class="category-info">
+                <h2>Pasta</h2>
+                <p>Creamy, cheesy, or spicy - we have pasta for every mood. Don't miss our Alfredo!</p>
+                <a href="pasta.html" class="order-btn">Order Now</a>
+            </div>
+        </div>
+        
+        <!-- Rolls Card -->
+        <div class="category-card">
+            <img src="https://spicecravings.com/wp-content/uploads/2020/12/Paneer-kathi-Roll-Featured-1.jpg" alt="Rolls">
+            <div class="category-info">
+                <h2>Rolls</h2>
+                <p>Perfect grab-and-go meals packed with flavor. Try our Paneer or Chicken rolls!</p>
+                <a href="rolls.html" class="order-btn">Order Now</a>
+            </div>
+        </div>
+        
+        <!-- Beverages Card -->
+        <div class="category-card">
+            <img src="https://www.forkinthekitchen.com/wp-content/uploads/2022/08/220629.iced_.latte_.vanilla-9009.jpg" alt="Beverages">
+            <div class="category-info">
+                <h2>Beverages</h2>
+                <p>Refresh yourself with our range of hot and cold drinks. Perfect with any meal!</p>
+                <a href="bev.html" class="order-btn">Order Now</a>
+            </div>
+        </div>
+        
+        <!-- Desserts Card -->
+        <div class="category-card">
+            <img src="https://www.tasteitpresents.com/wp-content/uploads/2019/06/lava-cake.png" alt="Desserts">
+            <div class="category-info">
+                <h2>Desserts</h2>
+                <p>Sweet endings to your meal. Our lava cake and cream pies are student favorites!</p>
+                <a href="food.html" class="order-btn">Order Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-preview" id="cartPreview" style="display: none;">
+        <h3>Your Cart 🛒</h3>
+        <div id="miniCart"></div>
+        <p>Total: Rs. <span id="miniTotal">0</span></p>
+        <button onclick="location.href='content.html'">Checkout</button>
+    </div>
+
+    <script>
+        // Cart functionality
+        function showCart() {
+            updateMiniCart();
+            document.getElementById('cartPreview').style.display = 'block';
+        }
+        
+        function updateMiniCart() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let miniCartDiv = document.getElementById("miniCart");
+            let miniTotalDiv = document.getElementById("miniTotal");
+            
+            miniCartDiv.innerHTML = "";
+            let total = 0;
+            
+            if (cart.length === 0) {
+                miniCartDiv.innerHTML = "<p>Your cart is empty</p>";
+            } else {
+                cart.forEach(item => {
+                    total += item.price;
+                    miniCartDiv.innerHTML += `<p>${item.item} - Rs.${item.price}</p>`;
+                });
+            }
+            
+            miniTotalDiv.innerText = total;
+        }
+        
+        // Close cart when clicking outside
+        document.addEventListener('click', function(event) {
+            let cartPreview = document.getElementById('cartPreview');
+            if (!event.target.closest('.cart-preview') && !event.target.closest('button[onclick="showCart()"]')) {
+                cartPreview.style.display = 'none';
+            }
+        });
+        
+        // Initialize
+        updateMiniCart();
+    </script>
 </body>
 </html>
-
