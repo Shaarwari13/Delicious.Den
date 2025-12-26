@@ -24,8 +24,8 @@ This project demonstrates a static multi-page website with a consistent layout, 
 
 ## Technologies Used
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
 - GitHub Pages
 
