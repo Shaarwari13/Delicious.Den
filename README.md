@@ -1,33 +1,49 @@
 # Delicious.Den
-Delicious Den is a simple food ordering website created for NMAMIT students.
-The project showcases a static multi-page website built using HTML, CSS, and JavaScript with a shared layout and cart functionality.
+Delicious Den is a simple food ordering website designed for NMAMIT students.
+The project demonstrates a static multi-page website with a consistent layout, category-based menu, and basic cart functionality.
 
-Features:
+Features
 
-1.Unified design across all pages using a common CSS file
-2.Category-based food menu:
- Pizza 
- Burgers
- Pasta
- Rolls
- Beverages
- Desserts
-3.Add to cart functionality using localStorage
-4.View cart and total price
-5.Remove items from cart
-6.Generate bill option
-7.Responsive layout using Flexbox
+Single, consistent layout across all pages using a common CSS file
+
+Food categories:
+
+Pizza
+
+Burgers
+
+Pasta
+
+Rolls
+
+Beverages
+
+Desserts
+
+Add items to cart
+
+Remove items from cart
+
+Cart total calculation
+
+Bill generation using JavaScript
+
+Data persistence using browser localStorage
 
 Technologies Used
-1.HTML5
-2.CSS3
-3.JavaScript (DOM manipulation & localStorage)
-4.GitHub Pages for hosting
 
-Project Structure:
-Delicious Den/
+HTML5
+
+CSS3
+
+JavaScript
+
+GitHub Pages
+
+Project Structure
+Delicious.Den/
 │
-├── index.html          (Main menu / landing page)
+├── index.html
 ├── pizza.html
 ├── burger.html
 ├── pasta.html
@@ -36,22 +52,33 @@ Delicious Den/
 ├── food.html
 │
 ├── css/
-│   └── common.css      (Shared stylesheet for all pages)
+│   └── common.css
 │
 └── README.md
 
-How to Use:
-1.Open the website link
-2.Select a food category from the main menu
-3.Add items to the cart
-4.View cart and total amount
-5.Generate bill
+How to Run the Project
 
-Live Website : https://shaarwari13.github.io/Delicious.Den/
+Open the hosted website link
 
-Future Improvements:
-1.Add user authentication
-2.Backend integration for orders
-3.Payment gateway
-4.Better mobile responsiveness
+Select a food category from the main menu
+
+Add items to the cart
+
+View the cart and total amount
+
+Generate the bill
+
+Live Website
+
+https://shaarwari13.github.io/Delicious.Den/
+
+Future Enhancements
+
+Backend integration for order handling
+
+User login and authentication
+
+Online payment system
+
+Improved responsive design
 
