@@ -1,60 +1,83 @@
-<body>
-    <title>Delicious Den</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Den - Pasta</title>
     <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
 
     <nav>
-        <a href="content.html"><button>Main menu</button></a>
+        <a href="content.html"><button>Main Menu</button></a>
     </nav>
 
     <h1>Pasta</h1>
 
-    <div class="pasta-container">
+    <section class="main-content">
         <div class="pasta-item">
-            <img src="https://grandbaby-cakes.com/wp-content/uploads/2021/03/Baked-Ziti14-scaled.jpg">
-            <h2>Spinach Lasagna<br> Rs.120 </h2>
+            <img src="https://grandbaby-cakes.com/wp-content/uploads/2021/03/Baked-Ziti14-scaled.jpg" alt="Spinach Lasagna">
+            <h3>Spinach Lasagna</h3>
+            <p>Rs.120</p>
             <button class="btn" onclick="addToCart('Spinach Lasagna', 120)">Add to cart</button>
         </div>
+
         <div class="pasta-item">
-            <img src="https://cookingwithayeh.com/wp-content/uploads/2023/12/Spinach-Lasagna-SQ-12.jpg">
-            <h2>Pesto Penne Pasta<br> Rs.110 </h2>
+            <img src="https://cookingwithayeh.com/wp-content/uploads/2023/12/Spinach-Lasagna-SQ-12.jpg" alt="Pesto Penne Pasta">
+            <h3>Pesto Penne Pasta</h3>
+            <p>Rs.110</p>
             <button class="btn" onclick="addToCart('Pesto Penne Pasta', 110)">Add to cart</button>
         </div>
+
         <div class="pasta-item">
-            <img src="https://bakeitwithlove.com/wp-content/uploads/2021/07/white-cheddar-mac-and-cheese-h.jpg.webp">
-            <h2>Stovetop Mac and Cheese with White Cheddar<br> Rs.190 </h2>
+            <img src="https://bakeitwithlove.com/wp-content/uploads/2021/07/white-cheddar-mac-and-cheese-h.jpg.webp" alt="Mac and Cheese Pasta">
+            <h3>Stovetop Mac and Cheese with White Cheddar</h3>
+            <p>Rs.190</p>
             <button class="btn" onclick="addToCart('Mac and Cheese Pasta', 190)">Add to cart</button>
         </div>
+
         <div class="pasta-item">
-            <img src="https://bing.com/th?id=OSK.5b88537bb19354c21c738fc53f5a4b74">
-            <h2>Creamy Tomato Pasta> Rs.150 </h2>
-            <button class="btn" onclick="addToCart('Creamy tomato pasta', 150)">Add to cart</button>
+            <img src="https://bing.com/th?id=OSK.5b88537bb19354c21c738fc53f5a4b74" alt="Creamy Tomato Pasta">
+            <h3>Creamy Tomato Pasta</h3>
+            <p>Rs.150</p>
+            <button class="btn" onclick="addToCart('Creamy Tomato Pasta', 150)">Add to cart</button>
         </div>
+
         <div class="pasta-item">
-            <img src="https://bing.com/th?id=OSK.ba2836b04d3a8814d712ad230ead5856">
-            <h2>Spaghetti Carbonara<br> Rs.170 </h2>
+            <img src="https://bing.com/th?id=OSK.ba2836b04d3a8814d712ad230ead5856" alt="Spaghetti Carbonara">
+            <h3>Spaghetti Carbonara</h3>
+            <p>Rs.170</p>
             <button class="btn" onclick="addToCart('Spaghetti Carbonara', 170)">Add to cart</button>
         </div>
+
         <div class="pasta-item">
-            <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Shrimp-Alfredo_EXPS_FT24_30092_JR_0208_1.jpg">
-            <h2>Shrimp Alfredo<br> Rs.260 </h2>
+            <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Shrimp-Alfredo_EXPS_FT24_30092_JR_0208_1.jpg" alt="Shrimp Alfredo">
+            <h3>Shrimp Alfredo</h3>
+            <p>Rs.260</p>
             <button class="btn" onclick="addToCart('Shrimp Alfredo', 260)">Add to cart</button>
         </div>
+
         <div class="pasta-item">
-            <img src="https://fullofplants.com/wp-content/uploads/2019/09/Cheesy-Tikka-Masala-Pasta-Bake-vegan-indian-one-skillet-recipe-thumb-3.jpg">
-            <h2>Masala Pasta<br> Rs.120 </h2>
+            <img src="https://fullofplants.com/wp-content/uploads/2019/09/Cheesy-Tikka-Masala-Pasta-Bake-vegan-indian-one-skillet-recipe-thumb-3.jpg" alt="Masala Pasta">
+            <h3>Masala Pasta</h3>
+            <p>Rs.120</p>
             <button class="btn" onclick="addToCart('Masala Pasta', 120)">Add to cart</button>
         </div>
+
         <div class="pasta-item">
-            <img src="https://www.gimmesomeoven.com/wp-content/uploads/2022/05/Pasta-Alla-Gricia-Recipe-6.jpg">
-            <h2>Alla Gricia Pasta<br> Rs.120 </h2>
+            <img src="https://www.gimmesomeoven.com/wp-content/uploads/2022/05/Pasta-Alla-Gricia-Recipe-6.jpg" alt="Alla Gricia Pasta">
+            <h3>Alla Gricia Pasta</h3>
+            <p>Rs.120</p>
             <button class="btn" onclick="addToCart('Alla Gricia Pasta', 120)">Add to cart</button>
         </div>
-    </div>
+    </section>
 
-    <h3>Cart 🛒</h3>
-    <div id="cart"></div>
-    <h4>Total: Rs. <span id="total">0</span></h4>
-    <button onclick="generateBill()">Generate Bill</button>
+    <section class="cart-section">
+        <h3>Cart 🛒</h3>
+        <div id="cart"></div>
+        <h4>Total: Rs. <span id="total">0</span></h4>
+        <button class="btn" onclick="generateBill()">Generate Bill</button>
+    </section>
 
     <script>
         function addToCart(item, price) {
